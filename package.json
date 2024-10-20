@@ -1,0 +1,31 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/SashaTolkodubova/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/SashaTolkodubova/frontend-project-46/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaTolkodubova/frontend-project-46.git"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SashaTolkodubova/frontend-project-46/issues"
+  },
+  "homepage": "https://github.com/SashaTolkodubova/frontend-project-46#readme",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "http-server": "^14.1.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
