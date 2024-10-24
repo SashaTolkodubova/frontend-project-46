@@ -22,7 +22,7 @@ const genDiff = (data1, data2) => {
     return `  ${key}: ${data1[key]}`;
   });
   console.log(difference.join('\n'));
-  return difference.join('\n');
+  return `${difference.join('\n')}`;
 };
 
 export default (filepath1, filepath2) => {
