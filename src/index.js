@@ -17,19 +17,22 @@ const genDiff = (data1, data2) => {
     } if (!Object.hasOwn(data2, key)) {
       return `- ${key}: ${data1[key]}`;
     } if (data1[key] !== data2[key]) {
-      return `- ${key}: ${data1[key]}\n+ ${key}: ${data2[key]}`;
+      return `- ${key}: ${data1[key]}\n  + ${key}: ${data2[key]}`;
     }
     return `  ${key}: ${data1[key]}`;
   });
-  console.log(difference.join('\n'));
-  return `${difference.join('\n')}`;
+  const result = `{
+  ${difference.join('\n  ')}
+}
+`;
+  return result;
 };
 
-export default (filepath1, filepath2) => {
+const genD = (filepath1, filepath2) => {
   const data1 = readFile(filepath1);
   const data2 = readFile(filepath2);
   const dataParse1 = JSON.parse(data1);
   const dataParse2 = JSON.parse(data2);
-  // console.log(dataParse1, dataParse2)
-  genDiff(dataParse1, dataParse2);
+  return genDiff(dataParse1, dataParse2);
 };
+export default genD;
