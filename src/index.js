@@ -1,12 +1,13 @@
 import { readFileSync } from 'node:fs';
 import path from 'path';
-// import fs from 'fs';
 import _ from 'lodash';
+import getParse from './parsers.js';
+// import fs from 'fs';
 // import { Console } from 'node:console';
 
 const getAbsolutPath = (filepath) => path.resolve(process.cwd(), '__fixtures__', filepath);
 const readFile = (filepath) => readFileSync(getAbsolutPath(filepath), 'utf-8');
-// const getFormat = (filename) => path.extname(filename);
+// const getFormat = (filename) => path.extname(filename).slice(1);
 
 const genDiff = (data1, data2) => {
   const keys = _.union(_.keys(data1), _.keys(data2));
@@ -28,11 +29,8 @@ const genDiff = (data1, data2) => {
   return result;
 };
 
-const genD = (filepath1, filepath2) => {
-  const data1 = readFile(filepath1);
-  const data2 = readFile(filepath2);
-  const dataParse1 = JSON.parse(data1);
-  const dataParse2 = JSON.parse(data2);
-  return genDiff(dataParse1, dataParse2);
+export default (filepath1, filepath2) => {
+  const getParsedData1 = getParse(filepath1, readFile(filepath1));
+  const getParsedData2 = getParse(filepath2, readFile(filepath2));
+  return genDiff(getParsedData1, getParsedData2);
 };
-export default genD;
