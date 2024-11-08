@@ -6,12 +6,12 @@ const getAbsolutPath = (filepath) => path.resolve(process.cwd(), '__fixtures__',
 const readFile = (filepath) => readFileSync(getAbsolutPath(filepath), 'utf-8');
 
 const getParse = (filePath, file) => {
-  const formatFile = path.extname(filePath).slice(1);
+  const formatFile = path.extname(filePath);
 
-  if (formatFile === 'json') {
+  if (formatFile === '.json') {
     return JSON.parse(file);
   }
-  if (formatFile === 'yml' || formatFile === 'yaml') {
+  if (formatFile === '.yml' || formatFile === '.yaml') {
     return yaml.load(readFile(filePath));
   }
   return file;
