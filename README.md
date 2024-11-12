@@ -12,6 +12,6 @@ Working with yaml files:
 <a href="https://asciinema.org/a/BnJfrAzJ6yFVFGnDkKqEJRtVX" target="_blank"><img src="https://asciinema.org/a/BnJfrAzJ6yFVFGnDkKqEJRtVX.svg" /></a>
 
 Working with stylish-format:
-<a href="https://asciinema.org/a/y7kQ1RQ1nfCOkGKCPI4CwA0Ke" target="_blank"><img src="https://asciinema.org/a/y7kQ1RQ1nfCOkGKCPI4CwA0Ke.svg" /></a>
+<a href="https://asciinema.org/a/odkvdZqoEZpS17TZUtirASoO5" target="_blank"><img src="https://asciinema.org/a/odkvdZqoEZpS17TZUtirASoO5.svg" /></a>
 Working with plain-format:
 <a href="https://asciinema.org/a/buvOp8tUE80oA5scRYKslkVqk" target="_blank"><img src="https://asciinema.org/a/buvOp8tUE80oA5scRYKslkVqk.svg" /></a>
